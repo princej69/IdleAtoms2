@@ -6,7 +6,8 @@
     </head>
     <body>
         <div id="header">
-            You have <span id="atoms">0</span> atoms.
+            <p>You have <span id="atoms">0</span> atoms. <em>(+<span id="atomspersec">0</span>/s)</em></p>
+            <button onclick="inc()'><p>Gain +<span id="atomgain">1</span> atoms.</p></button>
         </div>
         <button onclick="game.atoms++">Get an atom</button>
     </body>
