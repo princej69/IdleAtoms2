@@ -9,11 +9,19 @@ let game = {
     }
 }
 
+if (localStorage.getItem("data") != undefined) {
+    game = localStorage.getItem("data")
+}
+
 setInterval(()=>{
     game.atoms += game.aps/60
     document.getElementById("atoms").innerHTML = Math.floor(game.atoms)
     document.getElementById("atomspersec").innerHTML = Math.floor(game.aps)
 },1000/60)
+
+setInterval(()=>{
+    localStorage.setItem("data", game)
+},15000)
 
 function inc() {
     atoms += apc
